@@ -54,8 +54,9 @@
         android:id="@+id/b_bmi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginLeft="-8dp"
+        android:layout_marginTop="28dp"
+        android:onClick="bmi"
         android:text="Calculate BMI"
         app:layout_constraintLeft_toLeftOf="@+id/ed_height"
         app:layout_constraintTop_toBottomOf="@+id/ed_height" />
