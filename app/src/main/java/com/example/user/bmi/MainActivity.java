@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         //float weight = edWeight.getText().toString();
         float height = Float.parseFloat(edHeight.getText().toString());
         float bmi = weight / (height * height);
-
+        
 
         if (bmi<20){
             new AlertDialog.Builder(this)  //對話框
