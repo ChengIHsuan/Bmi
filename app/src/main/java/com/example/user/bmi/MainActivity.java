@@ -52,12 +52,23 @@ public class MainActivity extends AppCompatActivity {
         //float weight = edWeight.getText().toString();
         float height = Float.parseFloat(edHeight.getText().toString());
         float bmi = weight / (height * height);
-        new AlertDialog.Builder(this)  //對話框
-                //.setMessage("Your Bmi is " + bmi)  //訊息
-                .setMessage(getString(R.string.your_bmi_is) + bmi)  //alt + enter
-                .setPositiveButton(R.string.ok, null)  //正向按鈕 反向按鈕 中性按鈕(取消)
-                .setTitle(R.string.bmi_title)  //標題
-                .show();
+
+
+        if (bmi<20){
+            new AlertDialog.Builder(this)  //對話框
+                    .setMessage("Your Bmi is " + bmi +" ,請多吃點!")  //訊息
+                    .setPositiveButton(R.string.ok, null)  //正向按鈕 反向按鈕 中性按鈕(取消)
+                    .setTitle(R.string.bmi_title)  //標題
+                    .show();
+        }else {
+
+            new AlertDialog.Builder(this)  //對話框
+                    //.setMessage("Your Bmi is " + bmi)  //訊息
+                    .setMessage(getString(R.string.your_bmi_is) + bmi)  //alt + enter
+                    .setPositiveButton(R.string.ok, null)  //正向按鈕 反向按鈕 中性按鈕(取消)
+                    .setTitle(R.string.bmi_title)  //標題
+                    .show();
+        }
 
         //Log.d("MainActivity", "Your BMI is : " + bmi);
     }
