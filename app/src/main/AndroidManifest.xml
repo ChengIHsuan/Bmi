@@ -16,6 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ResultActivity"></activity>    //"."前面會自動補package全名→com.example.user.bmi.ResultActivity
     </application>
 
 </manifest>
